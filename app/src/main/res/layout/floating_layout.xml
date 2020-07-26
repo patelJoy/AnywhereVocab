@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutParent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:id="@+id/layoutCollapsed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/collapsed_iv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <ImageView
+                android:id="@+id/buttonClose"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="50dp"
+                android:src="@mipmap/ic_launcher_cancel_round" />
+        </RelativeLayout>
+
+        <!-- this is the expanded layout -->
+        <LinearLayout
+            android:id="@+id/layoutExpanded"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:visibility="gone">
+
+            <LinearLayout
+
+                android:paddingBottom="6dp"
+                android:id="@+id/buttonSimplifiedCoding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fl_word"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="15dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/fl_meaning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>
